@@ -6,7 +6,7 @@ module.exports.build = function build(cb) {
 
 	return async.series([
 			function(callback) {
-				exec("node node_modules/gulp-metalsmith-build/lib/build.js", callback);
+				exec("node --harmony node_modules/gulp-metalsmith-build/lib/build.js", callback);
 			},
 			function(callback) {
 				exec("rm -rf public", callback);
